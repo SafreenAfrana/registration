@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registration Page</title>
+        <meta name="description" content="">
+        <style>
+                body {font-family:  sans-serif; 
+                font-size: large;
+                background-color:dimgray;
+               
+                }
+                form {border: 3px;
+                  }
+                
+                input[type=text], input[type=date] ,input[type=number],SELECT[type="text"]{
+                  width: 15%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  box-sizing: border-box;
+                }
+                
+                
+                button {
+
+                  background-color: purple;
+                  color: white;
+                  padding: 8px 5px;
+                  margin: 5px 0;
+                  border: none;
+                  cursor: pointer;
+                  width: 10%;
+                }
+                button:hover {
+                   opacity: 0.8;
+                }
+                </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        
+    </head>
+        <body>
+        
+      <form action="page2.php" method="POST" name="myform"  onsubmit ="return validate()" >
+        
+      
+        
+        <h1>
+            User Registration Page:</h1>
+            <hr>
+        
+            <h3>Name:</h3>
+            <input type="text" name="name" placeholder="Enter Name" required>
+                      
+                  <h3>Age:</h3>
+          <input type="number"  name="age"  placeholder="Enter Age" required>
+
+          <h3> DOB:</h3>
+         <input type="date" name="dob" placeholder="Enter DOB" min="1989-01-01" max="2004-12-12" required><br>
+          
+           <h3>City: </h3>
+          
+          <SELECT type="text"   name="city">
+            
+            <OPTION Value="Chennai" required>Chennai</OPTION>
+            <OPTION Value="Madurai" required>Madurai</OPTION>
+            <OPTION Value="Dindugul" required>Dindugul</OPTION>
+            <OPTION Value="Trichy" required>Trichy</OPTION>
+            <OPTION Value="Karur" required>Karur</OPTION>
+            <OPTION Value="Coimbatore" required>Coimbatore</OPTION>
+            <OPTION Value="Erode" required>Erode</OPTION>
+            <OPTION Value="Salem" required>Salem</OPTION>
+            <OPTION Value="Tanjur" required>Tanjur</OPTION>
+            <OPTION Value="Ramnathapuram" required>Ramanathapuram</OPTION>
+            
+            </SELECT><br><br>
+            
+                <button  type="submit"  value=submit>submit</button>
+
+
+
+        
+               
+               <script type="text/javascript">
+                 function validate()
+              {
+
+               // var city=document.myform.city.value;
+                
+                //localStorage.setItem("city",city);
+
+                var Name=document.myform.name.value;
+               // console.log(Name);
+               // localStorage.setItem("name",Name);
+                if(Name.trim().length<3)
+                {
+                 alert("name must be atleast more than three characters"); 
+                 return false;
+                
+                  }
+                
+                  
+                
+                  else{
+                    true;
+                  }
+                 
+                  var age=document.myform.age.value;
+               // console.log(age);
+               // localStorage.setItem("age",age);
+                if(age<15)
+                {
+                 alert("enter the valid age")
+                 return false;
+                }
+                else  if(age>30)
+                {
+                 alert("enter the valid age"); 
+                  return false;
+                  }
+                  else{
+                    true;
+                  }
+
+                  
+            //      var date=document.myform.dob.value;
+             //     console.log(dob);
+             //   localStorage.setItem("date",dob);
+                  
+                    
+               
+                  
+
+
+              }
+                
+                 </script>
+                 
+        </form>
+    </body>
+    </html>
+
+
+
+
